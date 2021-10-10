@@ -5,7 +5,7 @@ services:
   jupyter:
     build: .
     command: sh jupyter.sh
-    container_name: app__jupyter
+    container_name: map__jupyter
     ports:
       - "6001:8888"
     volumes:
@@ -14,7 +14,7 @@ services:
       - inner
   postgres:
     image: postgres:13.4
-    container_name: app__postgres
+    container_name: map__postgres
     restart: always
     env_file: postgres.env
     expose:
