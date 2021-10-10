@@ -1,0 +1,8 @@
+/.idea/
+/.venv/
+/postgres-data/
+/postgres.env
+/src/config.py
+/research/
+/.env
+/data

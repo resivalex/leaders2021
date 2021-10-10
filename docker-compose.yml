@@ -1,0 +1,27 @@
+version: "3.9"
+networks:
+  inner:
+services:
+  jupyter:
+    build: .
+    command: sh jupyter.sh
+    container_name: app__jupyter
+    ports:
+      - "5002:8888"
+    volumes:
+      - .:/app
+    networks:
+      - inner
+  postgres:
+    image: postgres:13.4
+    container_name: app__postgres
+    restart: always
+    env_file: postgres.env
+    expose:
+      - "5432"
+    ports:
+      - "5003:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - inner
