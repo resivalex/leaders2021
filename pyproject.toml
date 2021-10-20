@@ -21,3 +21,6 @@ fastapi = "^0.68.1"
 uvicorn = {extras = ["standard"], version = "^0.15.0"}
 aiofiles = "~=0.7.0"
 Pillow = "~=8.3.2"
+ipyleaflet = "~=0.14.0"
+seaborn = "~=0.11.2"
+haversine = "~=2.5.1"
